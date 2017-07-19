@@ -15,7 +15,7 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
 
         page = response.url.split("/")[-2]
-        filename = "quotes-{0}.html".format(page)
+        filename = "quoteress-{0}.html".format(page)
         with open(filename, 'wb') as f:
             f.write(response.body)
         self.log('Saved file {0}'.format(filename))
